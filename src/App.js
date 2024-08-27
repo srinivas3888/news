@@ -3,7 +3,7 @@ import { OffcanvasExample } from './OffcanvasExample';
 import {Footer} from './Footer';
 import Load from './Load';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import React, { Suspense, lazy, useEffect, useState } from 'react';
+import React, { lazy, useEffect, useState } from 'react';
 import Ai from './Ai';
 const Home = lazy(()=>import("./Home"));
 const Technology = lazy(()=>import("./Technology"));
@@ -38,7 +38,7 @@ function App() {
           {/* Define Routes */}
           <Routes>
             {/* <Route index Component={loading(Home)} /> */}
-            <Route exact path='/' Component={loading(Home)} />
+            <Route exact path='' Component={loading(Home)} />
             <Route exact path='/subscribe' Component={loading(Subscribe)} />
             <Route exact path='/technology' Component={loading(Technology)} />
             <Route exact path='/sports' Component={loading(Sports)} />
