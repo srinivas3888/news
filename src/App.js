@@ -36,9 +36,8 @@ function App() {
         <div>
           <OffcanvasExample />
           {/* Define Routes */}
-          <Suspense fallback={<Load/>}>
           <Routes>
-            <Route index Component={loading(Home)} />
+            {/* <Route index Component={loading(Home)} /> */}
             <Route exact path='/' Component={loading(Home)} />
             <Route exact path='/subscribe' Component={loading(Subscribe)} />
             <Route exact path='/technology' Component={loading(Technology)} />
@@ -49,7 +48,6 @@ function App() {
             <Route exact path='/ai-news' Component={loading(Ai)} />
             <Route exact path='/subscribe/verify' Component={loading(Verify)} />
           </Routes>
-          </Suspense>
           <br /><br />
           <Footer />
           </div>
