@@ -1,6 +1,6 @@
 {
-  "homepage": "https://github.com/srinivas3888/news/",
   "name": "news",
+  "homepage": "https://srinivas3888.github.io/news",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
