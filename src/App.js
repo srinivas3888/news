@@ -38,7 +38,7 @@ function App() {
           {/* Define Routes */}
           <Routes>
             {/* <Route index Component={loading(Home)} /> */}
-            <Route exact path='' Component={loading(Home)} />
+            <Route exact path='/' Component={loading(Home)} />
             <Route exact path='/subscribe' Component={loading(Subscribe)} />
             <Route exact path='/technology' Component={loading(Technology)} />
             <Route exact path='/sports' Component={loading(Sports)} />
