@@ -2,7 +2,7 @@ import './App.css';
 import { OffcanvasExample } from './OffcanvasExample';
 import {Footer} from './Footer';
 import Load from './Load';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import Ai from './Ai';
 const Home = lazy(()=>import("./Home"));
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App" id='App' style={{backgroundColor:'black'}}>
-      <Router basename="/srinivas3888/news" >
+      <Router basename="/news" >
         <div>
           <OffcanvasExample />
           {/* Define Routes */}
