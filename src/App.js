@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App" id='App' style={{backgroundColor:'black'}}>
-      <Router basename="/news" >
+      <Router basename="/srinivas3888/news" >
         <div>
           <OffcanvasExample />
           {/* Define Routes */}
