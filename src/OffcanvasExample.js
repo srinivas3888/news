@@ -17,7 +17,7 @@ function OffcanvasExample() {
         {[ 'md' ].map((expand) => (
         <Navbar id="nav" key={expand} expand={expand} className="mb-3 p-1 navbar">
             <Container fluid>
-            <Navbar.Brand as={Link} to='/' style={{color:'white'}}><FontAwesomeIcon icon="fa-solid fa-rss" style={{fontSize:'2rem', color:'greenyellow'}} />Headlines Hub</Navbar.Brand>
+            <Navbar.Brand as={Link} to='/news' style={{color:'white'}}><FontAwesomeIcon icon="fa-solid fa-rss" style={{fontSize:'2rem', color:'greenyellow'}} />Headlines Hub</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
@@ -25,7 +25,7 @@ function OffcanvasExample() {
                 placement="end"
             >
                 <Offcanvas.Header closeButton>
-                <Nav.Link as={Link} to='/'>
+                <Nav.Link as={Link} to='/news'>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                     Headlines Hub
                 </Offcanvas.Title>
@@ -33,7 +33,7 @@ function OffcanvasExample() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-2">
-                    <Nav.Link as={Link} to='/' className="mx-2 my-1 text-bg-primary rounded-2 py-2 text-center">Home</Nav.Link>
+                    <Nav.Link as={Link} to='/news' className="mx-2 my-1 text-bg-primary rounded-2 py-2 text-center">Home</Nav.Link>
 
                 <div className="d-flex justify-content-center ">
                 <Dropdown className="mx-2 my-1 border-white">
