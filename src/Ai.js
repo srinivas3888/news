@@ -26,7 +26,7 @@ const generationConfig = {
 
 function Result({quest, ans}){
     return (
-        (quest==="")?(<div className="fs-5"> Hello,, <p className="fs-6">How can i help you today...</p> </div>):( <div className="m-2 p-1" style={{backgroundColor:"rgb(52, 52, 52)", borderRadius:'1rem', }}>
+        (quest==="")?(<></>):( <div className="m-2 p-1" style={{backgroundColor:"rgb(52, 52, 52)", borderRadius:'1rem', }}>
             <p className="fs-5 w-100" style={{borderRadius:'0.5rem'}} id="q"> <i className="bi bi-person-circle fs-4 m-1" style={{color:'white'}}></i> {quest}</p>
 
             <div className="d-flex flex-row justify-content-center">
@@ -110,6 +110,9 @@ function Ai(){
             <div className="d-flex justify-content-center" style={{scrollbarWidth:"thin", overflowX:'hidden', overflowY:'scroll', scrollBehavior:'smooth'}}>
             <div style={{height:'70vh'}} className="w-75">
                 <p style={{textAlign:'center'}} className="fs-4 m-1" id="ai-text">Smart AI-Assistant</p>
+                <div className="fs-5">
+                        Hello,, <p className="fs-6">How can i help you today...</p> 
+                </div>
                 <div className="m-2 p-1 ">
                 <div id="content" style={{color:'white', textAlign:'center', lineHeight:'2rem'}} className="d-flex flex-column justify-content-center">
                     {

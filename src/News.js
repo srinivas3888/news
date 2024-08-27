@@ -8,10 +8,15 @@ function News({category}){
 
     useEffect(()=>{
         let url="https://newsapi.org/v2/everything?q="+category+"&apiKey="+process.env.REACT_APP_API_KEY1;          
-        // ${import.meta.env.API_KEY}
         async function fetchNews(){
             try{
-                const response = await fetch(url, { method: "GET" });
+                const response = await fetch(url, { 
+                    method: "GET",
+                    headers: {
+                        'Content-Type':'application/json',
+                        'Upgrade-Insecure-Requests':'1'
+                    }
+                });
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
