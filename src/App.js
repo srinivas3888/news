@@ -31,14 +31,14 @@ function App() {
 
   return (
     <div className="App" id='App' style={{backgroundColor:'black'}}>
-      <Router basename={"/news"}>
+      <Router basename="/news" >
         <div>
           <OffcanvasExample />
           {/* Define Routes */}
           <Suspense fallback={<Load/>}>
           <Routes>
             <Route index Component={loading(Home)} />
-            <Route exact path='/news' Component={loading(Home)} />
+            <Route exact path='/' Component={loading(Home)} />
             <Route exact path='/subscribe' Component={loading(Subscribe)} />
             <Route exact path='/technology' Component={loading(Technology)} />
             <Route exact path='/sports' Component={loading(Sports)} />

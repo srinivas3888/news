@@ -66,7 +66,7 @@ function Verify(){
     }
 
     if(validated===true){
-        setTimeout(()=>{ navigate("/news") }, 2000);
+        setTimeout(()=>{ navigate("/") }, 2000);
     }
 
     

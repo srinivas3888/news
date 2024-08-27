@@ -7,7 +7,7 @@ function News({category}){
     const [articles, setArticles] = useState([]);
 
     useEffect(()=>{
-        let url="https://newsapi.org/v2/everything?q="+category+"&apiKey="+process.env.REACT_APP_API_KEY;          
+        let url="https://newsapi.org/v2/everything?q="+category+"&apiKey="+process.env.REACT_APP_API_KEY1;          
         // ${import.meta.env.API_KEY}
         async function fetchNews(){
             try{
