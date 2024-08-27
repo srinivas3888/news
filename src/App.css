@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+body{
+  overflow-x: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.type{
+  display: inline-block;
+  height:"20px";
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.text{
+  font-size: 1em;
+  letter-spacing: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: col 2s infinite;
+}
+.text span{
+  width: fit-content;
+  background-color: crimson;
+  box-shadow: 50px 50px 50px rgb(255, 255, 255);
+  text-align: center;
+  color: white;
+}
+@keyframes col {
+  0%{
+    color: red;
+    text-shadow: 0px 0px 40px red;
+  }
+  25%{
+    color: greenyellow;
+    text-shadow: 0px 0px 40px greenyellow;
+  }
+  50%{
+    color: crimson;
+    text-shadow: 0px 0px 40px crimson;
+  }
+  75%{
+    color: black;
+    text-shadow: 0px 0px 40px black;
+  }
+}
+
+#otp{
+  width: 8em;
+  height: 2.3em;
+}
+#error{
+  text-align: center;
+  color: red;
+  font-size: 1em;
+}
+#success{
+  text-align: center;
+  color: green;
+}
+.error{
+  color: red;
+}
+#loader{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  text-align: center;
+  background-color: transparent;
+  opacity: 8;
+}
+.navbar{
+  background-color: rgba(26, 98, 103, 0.5);
+  border-radius: 0.5rem;
+  color: black;
+  box-shadow:0 15px 25px rgba(0,0,0,0.2);
+}
+#ai-text{
+  animation: ai 2s infinite;
+}
+@keyframes ai {
+  0%{
+    color: fuchsia;
+  }
+  60%{
+    color: greenyellow ;
+  }
+  90%{
+    color: aqua;
+  }
+}
+#ai-load{
+  animation: ai-load 2s infinite;
+}
+@keyframes ai-load {
+  0%{
+    color: black;
+  }
+  35%{
+    color: red;
+  }
+  80%{
+    color: white;
+  }
+}
+
+
+/* Mobiles */
+@media screen and (max-width:760px) {
+  .offcanv{
+    display: block;
+  }
+  .desktop{
+    display: none;
+  }
+  .hide{
+    top: 70px;
+  }
+  
+}
+
+/* Desktops */
+@media screen and (min-width:760px) {
+  .offcanv{
+    display: none;
+  }
+  .desktop{
+    display: block;
+  }
+  .end{
+    position: absolute;
+    right: 0px;
+  }
+  .head{
+    margin: 0px;
+    width: 100%;
+    height: 2em;
+    padding: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.2em;
+  }
+  .hide{
+    top: 76px;
+  }
+  
+  
+}
