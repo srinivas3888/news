@@ -22,9 +22,10 @@ function News({category}){
                 throw new Error('Network response was not ok');
             }
 
+            response = await response.json();
             console.log(response);
-            let data = await response.articles;
-            setArticles(data);
+            // let data = await response.articles;
+            // setArticles(data);
 
             console.log('Success:');
             }
