@@ -37,7 +37,7 @@ function Headlines(){
             console.log(response);
             let data = await response.articles;
             let d=[];
-            for(let i=0; i<4; i++){
+            for(let i=0; i<3; i++){
                 d.push(data[i]);
             }
             setArticles(d);
