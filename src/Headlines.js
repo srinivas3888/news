@@ -63,7 +63,7 @@ function Headlines(){
                         <ComponentHead title={news.title} url={news.url} key={index} />
                 );
             })
-        ):( <p style={{color:'white'}}>No News Available</p> )
+        ):( <p style={{color:'white'}}>Loading News...</p> )
         }
         </div>
         </>
