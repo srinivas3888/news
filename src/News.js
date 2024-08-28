@@ -22,6 +22,7 @@ function News({category}){
                 throw new Error('Network response was not ok');
             }
 
+            console.log(response);
             let data = await response.articles;
             setArticles(data);
 
@@ -46,7 +47,7 @@ function News({category}){
                         <Component title={news.title} description={news.description} url={news.url} img={news.urlToImage} key={index} />
                 );
             })
-        ):( <p>No News Available</p> )
+        ):( <p style={{color:'white'}}>No News Available</p> )
         }
         </div>
         </>

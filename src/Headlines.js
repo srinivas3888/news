@@ -33,6 +33,7 @@ function Headlines(){
                 throw new Error('Network response was not ok');
             }
 
+            console.log(response);
             let data = await response.articles;
             let d=[];
             for(let i=0; i<4; i++){
