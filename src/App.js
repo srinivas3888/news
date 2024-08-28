@@ -20,7 +20,7 @@ const loading = (Component)=>{
     let [isload, setIsload]=useState(true);
   useEffect(()=>{
     
-    setTimeout(()=>{ setIsload(false) }, 2000);
+    setTimeout(()=>{ setIsload(false) }, 2200);
   }, []);
   return isload ? <Load/> : <Component/>;
   };

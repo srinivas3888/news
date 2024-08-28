@@ -48,7 +48,7 @@ function News({category}){
                         <Component title={news.title} description={news.description} url={news.url} img={news.urlToImage} key={index} />
                 );
             })
-        ):( <p style={{color:'white'}}>Loading News...</p> )
+        ):( <p style={{color:'white'}} className="d-flex justify-content-center">Loading News...</p> )
         }
         </div>
         </>

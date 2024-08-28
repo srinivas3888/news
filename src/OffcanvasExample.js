@@ -6,7 +6,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function OffcanvasExample() {
@@ -17,8 +16,8 @@ function OffcanvasExample() {
         {[ 'md' ].map((expand) => (
         <Navbar id="nav" key={expand} expand={expand} className="mb-3 p-1 navbar" style={{color:'white'}}>
             <Container fluid>
-            <Navbar.Brand as={Link} to='/' style={{color:'white'}}><FontAwesomeIcon icon="fa-solid fa-rss" style={{fontSize:'2rem', color:'greenyellow'}} />Headlines Hub</Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} style={{color:'white', backgroundColor:'white'}} />
+            <Navbar.Brand as={Link} to='/' style={{color:'white'}}> Headlines Hub</Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} style={{color:'white', backgroundColor:'skyblue'}} />
             <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -53,6 +52,7 @@ function OffcanvasExample() {
 
                 <Nav.Link as={Link} to='/ai-news' className="mx-2 my-1 text-bg-primary rounded-2 py-2 text-center">AI-assist.</Nav.Link>
                 <Nav.Link as={Link} to='/subscribe' className="ms-2 me-1 my-1 text-bg-primary rounded-2 py-2 text-center">Subscribe</Nav.Link>
+
                 </Nav>
                 </Offcanvas.Body>
             </Navbar.Offcanvas>

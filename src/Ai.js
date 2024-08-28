@@ -107,10 +107,10 @@ function Ai(){
 
     return(
         <div className="w-100 m-2 p-2" >
-            <div className="d-flex justify-content-center" style={{scrollbarWidth:"thin", overflowX:'hidden', overflowY:'scroll', scrollBehavior:'smooth'}}>
-            <div style={{height:'70vh'}} className="w-75">
+            <div className="d-flex justify-content-center" style={{scrollbarWidth:"none", overflowX:'hidden', overflowY:'scroll', scrollBehavior:'smooth'}}>
+            <div style={{height:'70vh'}} id="con">
                 <p style={{textAlign:'center'}} className="fs-4 m-1" id="ai-text">Smart AI-Assistant</p>
-                <div className="fs-5">
+                <div className="fs-5" style={{color:'white'}}>
                         Hello,, <p className="fs-6">How can i help you today...</p> 
                 </div>
                 <div className="m-2 p-1 ">
@@ -131,7 +131,7 @@ function Ai(){
 
             <div className="d-flex justify-content-center position-sticky flex-column" style={{top:'100vh'}}>
                 <div className="d-flex justify-content-center">
-            <div className="input-group m-2 w-50 d-flex justify-content-center" >
+            <div className="input-group m-2 d-flex justify-content-center" id="inptag">
                 <input value={val} onChange={handleChange} id="inp" type="text" style={{ height:'3rem' }} className="form-control fs-6" placeholder="Enter a prompt here..." aria-label="Recipient's username" aria-describedby="button-addon2" />
                 <button className="btn btn-outline-success " type="button" id="button-addon2" onClick={handleClick}>Send</button>
             </div>

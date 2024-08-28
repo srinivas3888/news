@@ -127,7 +127,12 @@ body{
   .hide{
     top: 70px;
   }
-  
+  #inptag{
+    width: 90%;
+  }
+  #con{
+    width: 95%;
+  }
 }
 
 /* Desktops */
@@ -155,6 +160,11 @@ body{
   .hide{
     top: 76px;
   }
-  
-  
+  #inptag{
+    width: 70%;     
+    /* w-50 */
+  }
+  #con{
+    width: 75%;
+  }
 }

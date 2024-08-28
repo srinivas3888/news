@@ -71,7 +71,7 @@ function Verify(){
 
     
     return(
-        <div className="d-flex justify-content-center mt-1 mb-5">
+        <div className="d-flex justify-content-center mt-1 mb-5" >
             <div className="bg-body-secondary p-5">
             <Form onSubmit={handleSubmit} id="form">
                 <Row className="mb-4">
@@ -89,6 +89,10 @@ function Verify(){
                     Verify
                 </Button>
             </Form>
+
+            <div className="mt-1 mb-2">
+                <p style={{color:'rgb(107, 8, 8)'}}> Check your Email's Inbox & Spams! </p>
+            </div>
 
             <div id="error">
             { 
