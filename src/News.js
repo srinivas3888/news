@@ -6,24 +6,23 @@ import './App.css';
 function News({category}){
     const [articles, setArticles] = useState([]);
 
-    useEffect(()=>{
-        let url="https://newsapi.org/v2/everything?q="+category+"&apiKey="+process.env.REACT_APP_API_KEY1;          
+    useEffect(()=>{        
         async function fetchNews(){
+            let response;
             try{
-                const response = await fetch(url, { 
-                    method: "GET",
-                    headers: {
-                        'Content-Type':'application/json',
-                        'Upgrade-Insecure-Requests':'1'
-                    }
+                response = await fetch("https://fastapi-newsfetch.onrender.com/fetch/" , { 
+                    method: "POST",
+                    headers:{
+                        'Content-Type':'text/plain'
+                    },
+                    body: category
                 });
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
 
-            const result = await response.json();
-            let data = result.articles;
+            let data = await response.articles;
             setArticles(data);
 
             console.log('Success:');
@@ -42,11 +41,12 @@ function News({category}){
         <>
         <div id='all' className='d-flex justify-content-center flex-row flex-wrap m-1 p-1 w-auto overflow-x-hidden'>
         {
-            articles.map((news, index)=>{
+            ( articles && articles.length>0 )?( articles.map((news, index)=>{
                 return(
                         <Component title={news.title} description={news.description} url={news.url} img={news.urlToImage} key={index} />
                 );
             })
+        ):( <p>No News Available</p> )
         }
         </div>
         </>

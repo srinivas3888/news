@@ -17,24 +17,23 @@ function Headlines(){
     const [articles, setArticles] = useState([]);
 
     useEffect(()=>{
-        let url="https://newsapi.org/v2/top-headlines?country=in&apiKey="+process.env.REACT_APP_API_KEY1;
-
         async function fetchNews(){
+            let response;
             try{
-                const response = await fetch(url, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type':'application/json',
-                        'Upgrade-Insecure-Requests':'1'
-                    }
+                let t="headlines";
+                response = await fetch("https://fastapi-newsfetch.onrender.com/fetch/" , {
+                    method: "POST",
+                    headers:{
+                        'Content-Type':'text/plain'
+                    },
+                    body: t
                 });
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
 
-            const result = await response.json();
-            let data = result.articles, d=[];
+            let data = response.articles, d=[];
             for(let i=0; i<4; i++){
                 d.push(data[i]);
             }
@@ -56,11 +55,12 @@ function Headlines(){
         <>
         <div className='d-flex justify-content-center flex-row m-1 p-1 w-auto overflow-x-hidden' style={{backgroundColor:'red'}}>
         {
-            articles.map((news, index)=>{
+            ( articles && articles.length>0 )?( articles.map((news, index)=>{
                 return(
                         <ComponentHead title={news.title} url={news.url} key={index} />
                 );
             })
+        ):( <p>No News Available</p> )
         }
         </div>
         </>
