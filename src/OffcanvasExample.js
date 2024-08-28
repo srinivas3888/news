@@ -13,18 +13,19 @@ function OffcanvasExample() {
     
     return (
     <>
-    <div className="sticky-top">
+    <div className="sticky-top" style={{color:'white'}}>
         {[ 'md' ].map((expand) => (
-        <Navbar id="nav" key={expand} expand={expand} className="mb-3 p-1 navbar">
+        <Navbar id="nav" key={expand} expand={expand} className="mb-3 p-1 navbar" style={{color:'white'}}>
             <Container fluid>
             <Navbar.Brand as={Link} to='/' style={{color:'white'}}><FontAwesomeIcon icon="fa-solid fa-rss" style={{fontSize:'2rem', color:'greenyellow'}} />Headlines Hub</Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} style={{color:'white', backgroundColor:'white'}} />
             <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                 placement="end"
+                style={{color:'white'}}
             >
-                <Offcanvas.Header closeButton>
+                <Offcanvas.Header closeButton style={{color:"white"}}>
                 <Nav.Link as={Link} to='/'>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                     Headlines Hub
