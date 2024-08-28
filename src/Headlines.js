@@ -33,7 +33,8 @@ function Headlines(){
                 throw new Error('Network response was not ok');
             }
 
-            let data = response.articles, d=[];
+            let data = await response.articles;
+            let d=[];
             for(let i=0; i<4; i++){
                 d.push(data[i]);
             }
@@ -60,7 +61,7 @@ function Headlines(){
                         <ComponentHead title={news.title} url={news.url} key={index} />
                 );
             })
-        ):( <p>No News Available</p> )
+        ):( <p style={{color:'white'}}>No News Available</p> )
         }
         </div>
         </>
