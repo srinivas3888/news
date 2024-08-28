@@ -23,9 +23,9 @@ function News({category}){
             }
 
             response = await response.json();
-            console.log(response);
-            // let data = await response.articles;
-            // setArticles(data);
+            // console.log(response);
+            let data = await response.articles;
+            setArticles(data);
 
             console.log('Success:');
             }

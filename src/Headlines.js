@@ -34,13 +34,13 @@ function Headlines(){
             }
 
             response = await response.json();
-            console.log(response);
-            // let data = await response.articles;
-            // let d=[];
-            // for(let i=0; i<4; i++){
-            //     d.push(data[i]);
-            // }
-            // setArticles(d);
+            // console.log(response);
+            let data = await response.articles;
+            let d=[];
+            for(let i=0; i<4; i++){
+                d.push(data[i]);
+            }
+            setArticles(d);
 
             console.log('Success:');
             }
