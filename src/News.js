@@ -23,7 +23,7 @@ function News({category}){
             }
 
             response = await response.json();
-            // console.log(response);
+            console.log(response);
             let data = await response.articles;
             setArticles(data);
 

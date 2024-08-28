@@ -34,7 +34,7 @@ function Headlines(){
             }
 
             response = await response.json();
-            // console.log(response);
+            console.log(response);
             let data = await response.articles;
             let d=[];
             for(let i=0; i<4; i++){
