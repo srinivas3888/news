@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 import { Link } from "react-router-dom";
 import './App.css';
 import Container from 'react-bootstrap/Container';
@@ -9,6 +9,20 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 
 function OffcanvasExample() {
+    let [v, setV]=useState('sm');
+
+    window.addEventListener('resize', ()=>{
+        let w=window.innerWidth;
+        // let h=window.innerHeight;
+        if(w<768){
+            setV("sm");
+        }
+        else{
+            setV("lg");
+        }
+    });
+
+        
     
     return (
     <>
@@ -55,7 +69,8 @@ function OffcanvasExample() {
                 <Nav.Link as={Link} to='/subscribe' className="ms-2 me-1 my-1 text-bg-primary rounded-2 py-2 text-center">Subscribe</Nav.Link>
 
                 </Nav>
-                <p style={{color:"black", marginTop:'5.5rem'}}>
+                {
+                (v==="lg")?(<div></div>):(<p style={{color:"black", marginTop:'5.5rem'}}>
                 <div style={{height:'15rem', bottom:'0px'}}>
             <h3 className="fs-6 d-flex justify-content-center" style={{color:'gray'}} ><span className="fs-5 m-1 p-1" style={{color:'green'}}> Headlines Hub </span> © 2024 Company, Inc</h3>
             <h5 className="fs-6 d-flex justify-content-center" style={{color:'crimson'}}>Created by - Srinivas Batthula</h5>
@@ -68,7 +83,8 @@ function OffcanvasExample() {
             <p >Stay tuned to Headlines Hub,, Stay updated</p>
             </div>
             </div>
-                </p>
+                </p>)
+                }
                 </Offcanvas.Body>
             </Navbar.Offcanvas>
             </Container>
