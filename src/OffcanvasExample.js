@@ -9,7 +9,14 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 
 function OffcanvasExample() {
-    let [v, setV]=useState('sm');
+    let wi=window.innerWidth, va;
+    if(wi<768){
+        va="sm";
+    }
+    else{
+        va="lg";
+    }
+    let [v, setV]=useState(va);
 
     window.addEventListener('resize', ()=>{
         let w=window.innerWidth;
