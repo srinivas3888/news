@@ -21,12 +21,14 @@ function Headlines(){
             let response;
             try{
                 let t="headlines";
+
                 response = await fetch("https://fastapi-newsfetch.onrender.com/fetch/" , {
                     method: "POST",
                     headers:{
                         'Content-Type':'text/plain'
                     },
                     body: t
+                    
                 });
 
             if (!response.ok) {

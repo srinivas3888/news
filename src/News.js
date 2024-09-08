@@ -9,6 +9,7 @@ function News({category}){
     useEffect(()=>{        
         async function fetchNews(){
             let response;
+
             try{
                 response = await fetch("https://fastapi-newsfetch.onrender.com/fetch/" , { 
                     method: "POST",
