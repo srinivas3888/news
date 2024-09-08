@@ -133,6 +133,9 @@ body{
   #con{
     width: 95%;
   }
+  #extranav{
+    display: block;
+  }
 }
 
 /* Desktops */
@@ -166,5 +169,8 @@ body{
   }
   #con{
     width: 75%;
+  }
+  #extranav{
+    display: none;
   }
 }
